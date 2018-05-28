@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 49;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,8 +14,7 @@
 		EFF95B7A20A7846F00EC0C78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF95B7820A7846F00EC0C78 /* LaunchScreen.storyboard */; };
 		EFF95B8520A7846F00EC0C78 /* Life_CounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF95B8420A7846F00EC0C78 /* Life_CounterTests.swift */; };
 		EFF95B9020A7846F00EC0C78 /* Life_CounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF95B8F20A7846F00EC0C78 /* Life_CounterUITests.swift */; };
-		EFF95BB020A8E4DB00EC0C78 /* Standard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF95BAF20A8E4DB00EC0C78 /* Standard.swift */; };
-		EFF95BB220A8E4FC00EC0C78 /* Commander.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF95BB120A8E4FC00EC0C78 /* Commander.swift */; };
+		EFF95BB020A8E4DB00EC0C78 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF95BAF20A8E4DB00EC0C78 /* GameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +48,7 @@
 		EFF95B8B20A7846F00EC0C78 /* Life CounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Life CounterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFF95B8F20A7846F00EC0C78 /* Life_CounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Life_CounterUITests.swift; sourceTree = "<group>"; };
 		EFF95B9120A7846F00EC0C78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EFF95BAF20A8E4DB00EC0C78 /* Standard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Standard.swift; sourceTree = "<group>"; };
-		EFF95BB120A8E4FC00EC0C78 /* Commander.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commander.swift; sourceTree = "<group>"; };
+		EFF95BAF20A8E4DB00EC0C78 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				EFF95B6F20A7846E00EC0C78 /* AppDelegate.swift */,
-				EFF95BAF20A8E4DB00EC0C78 /* Standard.swift */,
-				EFF95BB120A8E4FC00EC0C78 /* Commander.swift */,
+				EFF95BAF20A8E4DB00EC0C78 /* GameController.swift */,
 				EFF95B7120A7846E00EC0C78 /* ViewController.swift */,
 				EFF95B7320A7846E00EC0C78 /* Main.storyboard */,
 				EFF95B7620A7846F00EC0C78 /* Assets.xcassets */,
@@ -211,7 +208,7 @@
 				};
 			};
 			buildConfigurationList = EFF95B6720A7846E00EC0C78 /* Build configuration list for PBXProject "Life Counter" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 9.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -262,8 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFF95BB220A8E4FC00EC0C78 /* Commander.swift in Sources */,
-				EFF95BB020A8E4DB00EC0C78 /* Standard.swift in Sources */,
+				EFF95BB020A8E4DB00EC0C78 /* GameController.swift in Sources */,
 				EFF95B7220A7846E00EC0C78 /* ViewController.swift in Sources */,
 				EFF95B7020A7846E00EC0C78 /* AppDelegate.swift in Sources */,
 			);
@@ -428,8 +424,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -441,10 +436,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q38VRHW498;
 				INFOPLIST_FILE = "Life Counter/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "BarrettPC.Life-Counter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -459,10 +451,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q38VRHW498;
 				INFOPLIST_FILE = "Life Counter/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "BarrettPC.Life-Counter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -478,11 +467,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q38VRHW498;
 				INFOPLIST_FILE = "Life CounterTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "BarrettPC.Life-CounterTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -499,11 +484,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q38VRHW498;
 				INFOPLIST_FILE = "Life CounterTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "BarrettPC.Life-CounterTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -519,11 +500,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q38VRHW498;
 				INFOPLIST_FILE = "Life CounterUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "BarrettPC.Life-CounterUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -539,11 +516,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q38VRHW498;
 				INFOPLIST_FILE = "Life CounterUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "BarrettPC.Life-CounterUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
